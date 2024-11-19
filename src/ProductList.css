@@ -1,0 +1,266 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1efef;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #e1eae1;
+  color: #fff!important;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: px;
+}
+
+.navbar .ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1100px;
+}
+
+.navbar li {
+  margin-right: 30px;
+}
+
+.navbar .ul div a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+ 
+}
+
+/* Product Grid */
+.product-grid {
+  display:flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  color: #f2efef;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  /* background-color: pink; */
+  /* justify-content: space-between; */
+  padding: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Product Card */
+.product-card {
+  flex: 0 0 calc(33.33% - 20px); 
+  max-width: calc(26.33% - 20px); 
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: rgba(245, 244, 188, 0.8); 
+  border: 1px solid #03eb1e;
+  border-radius: 50px;
+  text-align: center;
+  position: relative;
+  color: rgb(20, 20, 20);
+  gap: 20px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.product-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  color: #020202;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: 200px; 
+}
+
+.product-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.product-button:hover {
+  background-color: #c0392b;
+}
+
+
+.product-card::before {
+  content: "SALE";
+  background-color: #e74c3c;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  border-radius: 0 0 0 5px;
+}
+.tag_home_link{
+  display: flex;
+  /* background-color: red; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.tag_home_link h3{
+  font-size: 30px;
+}
+.tag a{
+  text-decoration: none;
+}
+.tag {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag img {
+  height: 70px;
+  width: 70px;
+  border-radius: 70%;
+  
+}
+
+.luxury {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 650px;
+  font-size: 19px;
+}
+.cart{
+  color: white;
+  display: flex;
+}
+.cart_quantity_count{
+  margin-top: 16px;
+  /* background-color: red; */
+  margin-left: 27px;
+  position: absolute;
+  font-size: 29px;
+color: white;
+}
+.plantname_heading{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  /* background-color: yellow; */
+}
+.plant_heading{
+  width: 400px;
+  text-align: center;
+  margin: 20px;
+  border: 1px solid rgb(43, 241, 8);
+  border-radius: 50px;
+  border-left: none;
+  border-right: none;
+
+  
+}
+
+.cart-container {
+  position: relative;
+  color: #f3efef;
+}
+
+.cart-count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  border-radius: 50%;
+  padding-bottom: 8px;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+      flex: 1 1 calc(50% - 20px); 
+      max-width: calc(50% - 20px); 
+  }
+}
+
+
+.product-button {
+  background-color: #15e31c;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 1px;
+  border-radius: 50px;
+}
+
+.product-button:hover {
+  background-color: #45a049;
+}
+
+.product-button.added-to-cart {
+  background-color: rgb(240, 10, 10); 
+}
+@media (max-width: 1200px) {
+  .product-card {
+    flex: 1 1 calc(33.33% - 20px); 
+    max-width: calc(33.33% - 20px); 
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    flex: 1 1 calc(50% - 20px); 
+    max-width: calc(50% - 20px); 
+  }
+  .navbar {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .tag {
+      margin-bottom: 20px;
+      text-align: center; 
+    }
+  
+    .ul {
+      display: flex; 
+      flex-direction: column;
+      gap: 10px; 
+    }
+  
+    .ul div {
+      text-align: center;
+    }
+}

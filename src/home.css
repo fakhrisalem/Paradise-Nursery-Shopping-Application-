@@ -1,0 +1,54 @@
+.home-container {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh; 
+  background-size: cover; 
+  background-position: center;
+  filter: brightness(0.9);
+
+  animation: changeBackground 20s infinite;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url("https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/8cb49433-2783-445d-9508-7733110d1909._SL5000_CR0%2C1989%2C5000%2C2500_.jpg");
+  }
+  25% {
+    background-image: url("https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/08d0f702-0657-45fa-a185-5607085a8239._CR0%2C0%2C1500%2C751_SX1500_.jpg");
+  }
+  50% {
+    background-image: url("https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/3aafddee-5263-4624-8442-d9dd5981f528._CR0%2C1%2C1500%2C750_.jpg");
+  }
+  75% {
+    background-image: url("https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/405224e2-d6af-4e58-b294-e704170bb220._CR0%2C0%2C3000%2C1500_.png");
+  }
+ 100% {
+    background-image: url("https://thewoodmongers.com/wp-content/uploads/2024/01/2024-design-trends-1024x576.png");
+  }
+}
+
+
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+.spacer {
+    margin: 40px 0;
+}
+
+.features-container, .shopall-container, .testimonials-container {
+    padding: 2px;
+    margin-bottom: 10px;
+}

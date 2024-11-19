@@ -1,0 +1,51 @@
+.contact-us {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    padding: 50px;
+    background-color: rgba(20, 20, 20, 0.8); 
+    border-radius: 25px;
+    max-width: 1200px; 
+    margin: 50px auto; 
+    color: white;
+    border: #12660c 1px solid;
+    border-radius: 300px;
+}
+
+.form-container {
+    flex: 0 0 400px; 
+    max-width: 600px; 
+    margin: 0 20px; 
+}
+
+.contact-us input,
+.contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #bd1414;
+    border-radius: 25px;
+}
+
+.contact-us button {
+    padding: 10px 20px;
+    background-color: #12660c;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.image-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+}
+
+.image-container img {
+    max-width: 90%; 
+    height: auto; 
+
+    border-radius: 25px;
+   
+}

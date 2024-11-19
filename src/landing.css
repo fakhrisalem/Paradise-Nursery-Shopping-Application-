@@ -1,0 +1,28 @@
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  text-align: center;
+  background-image: url("https://i.pinimg.com/originals/3d/c3/87/3dc387151b115cf7ae0cf344b8e40eff.gif");
+ color: #f1eaea;
+}
+
+.get-started-button {
+  margin-top: 20px; 
+  padding: 10px 20px;
+  font-size: 18px; 
+  background-color: #70b82d; 
+  color: white; 
+  border: none; 
+  border-radius: 500px; 
+  cursor: pointer; 
+  transition: background 0.3s; 
+}
+
+.get-started-button:hover {
+  background-color: #494013; 
+}

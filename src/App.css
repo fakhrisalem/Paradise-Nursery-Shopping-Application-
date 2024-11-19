@@ -1,0 +1,79 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+ background-image: url("https://i.pinimg.com/originals/3d/c3/87/3dc387151b115cf7ae0cf344b8e40eff.gif");
+ color: #141111;
+}
+
+/* Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+ background-image: url("https://i.pinimg.com/originals/3d/c3/87/3dc387151b115cf7ae0cf344b8e40eff.gif");
+ color: #f9efef;
+  padding: 1px 0;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+   background-image: url("https://i.pinimg.com/originals/3d/c3/87/3dc387151b115cf7ae0cf344b8e40eff.gif");
+ color: #f9efef;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background 0.3s;
+}
+
+.navbar button:hover {
+  background-color: green;
+  border: 2px;
+  border-radius: 50px;
+}
+
+/* Landing Page Styles */
+.landing-page {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  background-image: url("https://i.pinimg.com/originals/5a/6b/54/5a6b543dbb3c11695e25627f04f35d89.gif");
+  background-repeat: no-repeat;
+  background-size: contain; 
+  color: #f9efef;
+  gap: 50px;
+
+}
+
+.content {
+  padding: 20px;
+}
+
+.about-us, .contact, .products {
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(20, 20, 20, 0.8); 
+}
+
+
+.footer {
+ background-image: url("https://i.pinimg.com/originals/b4/12/97/b41297b432375fd5e04f42bd82d1b030.gif");
+ color: #f9efef;
+  text-align: center;
+  padding: 10px 0;
+}
