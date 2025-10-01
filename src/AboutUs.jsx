@@ -24,33 +24,18 @@ function AboutUs() {
       </p>
 
       <p className="plant_logo_left">
-        <img 
-          src="https://i.pinimg.com/originals/7c/cd/e6/7ccde6a93c911570c1457e1325df22f2.gif" 
-          height='50px' 
-          width='50px' 
-          alt="Plant Logo" 
-        />
+       
       </p>
      
 
       <p className="plant_logo_right">
-        <img 
-          src="https://i.pinimg.com/originals/ee/34/9f/ee349f7a8f7bf015c886d9efe673a3ec.gif" 
-          height='50px' 
-          width='50px' 
-          alt="Plant Logo" 
-        />
+        
       </p>
       <div className="service-container">
                     <Service />
                 </div>
                 <p className="plant_logo_left">
-        <img 
-          src="https://i.pinimg.com/originals/70/de/93/70de934a0dc1173355f6667c428bed76.gif" 
-          height='50px' 
-          width='50px' 
-          alt="Plant Logo" 
-        />
+      
       </p>
 
       {}
