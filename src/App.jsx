@@ -6,6 +6,7 @@ import AboutUs from './AboutUs';
 import Products from './productList';
 import ContactUs from './contactus';
 import Cart from './Cartltem';
+import Footer from './footer';
 import store from './store';
 import './App.css';
 
@@ -35,15 +36,15 @@ function App() {
         {currentPage === 'landing' && (
           <Landing onGetStarted={() => handleNavigation('home')} />
         )}
-        {currentPage === 'home' && <Home />}
+        {currentPage === 'home' && (
+          <Home onNavigateToProducts={() => handleNavigation('products')} />
+        )}
         {currentPage === 'aboutus' && <AboutUs />}
         {currentPage === 'products' && <Products onViewCartClick={() => handleNavigation('cart')} />}
         {currentPage === 'cart' && <Cart onContinueShopping={() => handleNavigation('products')} />}
         {currentPage === 'contactus' && <ContactUs />}
 
-        <footer className="footer">
-          <p>&copy; 2024 Moo Plants. All rights reserved.</p>
-        </footer>
+        {currentPage !== 'landing' && <Footer onNavigate={handleNavigation} />}
       </div>
     </Provider>
   );

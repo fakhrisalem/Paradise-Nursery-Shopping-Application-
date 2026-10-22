@@ -23,35 +23,12 @@ function AboutUs() {
         Join us in our mission to create a greener, healthier world. Visit Paradise Nursery today and experience the beauty of nature right at your doorstep.
       </p>
 
-      <p className="plant_logo_left">
-       
-      </p>
-     
+      <Service />
 
-      <p className="plant_logo_right">
-        
-      </p>
-      <div className="service-container">
-                    <Service />
-                </div>
-                <p className="plant_logo_left">
-      
-      </p>
-
-      {}
-      <button 
-        className="scroll-to-top" 
-        onClick={scrollToTop} 
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          right: '20px',
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
-          fontSize: '40px',
-          color: 'white',
-        }}
+      <button
+        className="scroll-to-top"
+        onClick={scrollToTop}
+        aria-label="Scroll to top"
       >
         ↑
       </button>

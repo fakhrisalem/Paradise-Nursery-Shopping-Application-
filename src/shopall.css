@@ -1,10 +1,16 @@
 .ShopAll {
-  padding: 30px 100px;
+  padding: 36px clamp(20px, 6vw, 100px);
 }
 
 .featured-image {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(221, 239, 214, 0.75);
+  border-radius: 28px;
+  background: #173b2c;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.24);
+  animation: imageReveal 0.8s both;
 }
 
 .featured-image img {
@@ -12,6 +18,27 @@
   height: 500px;
   display: block;
   object-fit: cover;
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.featured-image:hover img {
+  transform: scale(1.035);
+  filter: saturate(1.08);
+}
+
+.image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.image-link:focus-visible {
+  outline: 3px solid #b9d9a8;
+  outline-offset: 3px;
 }
 
 .ShopAll_content {
@@ -21,26 +48,55 @@
 }
 
 .ShopAll__content__cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 26px);
 }
 
 .ShopAll_content__cards__item {
-  width: calc(33.333% - 20px);
+  min-width: 0;
   box-sizing: border-box;
 }
 
 .ShopAll__content__cards__item__img-wrapper {
+  position: relative;
+  padding: 5px;
   overflow: hidden;
-  border: 2px dotted #ccc;
-  border-radius: 25px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s, border-color 0.3s;
+  border: 1px solid rgba(216, 235, 205, 0.72);
+  border-radius: 24px;
+  height: clamp(230px, 28vw, 360px);
+  background: linear-gradient(145deg, #f0f7e9, #8eb58d 45%, #285c43);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  animation: imageReveal 0.65s both;
+}
+
+.ShopAll_content__cards__item:nth-child(2) .ShopAll__content__cards__item__img-wrapper {
+  animation-delay: 0.08s;
+}
+
+.ShopAll_content__cards__item:nth-child(3) .ShopAll__content__cards__item__img-wrapper {
+  animation-delay: 0.16s;
+}
+
+.ShopAll_content__cards__item:nth-child(4) .ShopAll__content__cards__item__img-wrapper {
+  animation-delay: 0.24s;
+}
+
+.ShopAll_content__cards__item:nth-child(5) .ShopAll__content__cards__item__img-wrapper {
+  animation-delay: 0.32s;
+}
+
+.ShopAll_content__cards__item:nth-child(6) .ShopAll__content__cards__item__img-wrapper {
+  animation-delay: 0.4s;
+}
+
+.ShopAll__content__cards__item__img-wrapper:hover {
+  z-index: 1;
+  transform: translateY(-7px);
+  border-color: #f0f7e9;
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.32);
 }
 
 .ShopAll__content__cards__item__img-wrapper img {
@@ -48,38 +104,54 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 25px;
+  border-radius: 18px;
+  transition: transform 0.65s ease, filter 0.65s ease;
 }
 
-.ShopAll__content__cards__item__img-wrapper:hover {
-  transform: scale(1.05);
-  border-color: #121212;
+.ShopAll__content__cards__item__img-wrapper:hover img {
+  transform: scale(1.055);
+  filter: saturate(1.08);
+}
+
+@keyframes imageReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 992px) {
-  .ShopAll {
-    padding: 30px 40px;
-  }
-
-  .ShopAll_content__cards__item {
-    width: calc(50% - 20px);
+  .ShopAll__content__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 768px) {
-  .ShopAll {
-    padding: 20px;
-  }
-
   .featured-image img {
-    height: 300px;
+    height: clamp(220px, 62vw, 340px);
   }
 
-  .ShopAll_content__cards__item {
-    width: 100%;
+  .ShopAll__content__cards {
+    grid-template-columns: 1fr;
   }
 
   .ShopAll__content__cards__item__img-wrapper {
-    height: 350px;
+    height: clamp(280px, 82vw, 400px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-image,
+  .ShopAll__content__cards__item__img-wrapper {
+    animation: none;
+  }
+
+  .featured-image img,
+  .ShopAll__content__cards__item__img-wrapper,
+  .ShopAll__content__cards__item__img-wrapper img {
+    transition: none;
   }
 }

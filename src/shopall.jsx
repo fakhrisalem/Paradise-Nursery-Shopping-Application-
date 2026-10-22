@@ -34,24 +34,36 @@ const ShopAllData = [
   },
 ];
 
-const ShopAll = () => {
+const ShopAll = ({ onNavigateToProducts }) => {
   return (
     <section id="ShopAll" className="ShopAll">
-      {}
       <div className="featured-image">
-        <img src={ImageOne} alt="Featured" />
+        <button
+          type="button"
+          className="image-link featured-image-link"
+          onClick={onNavigateToProducts}
+          aria-label="Go to products"
+        >
+          <img src={ImageOne} alt="Featured" />
+        </button>
       </div>
 
-      {}
       <div className="ShopAll_content">
         <div className="ShopAll__content__cards">
           {ShopAllData.map((item, index) => (
             <div key={index} className="ShopAll_content__cards__item">
               <div className="ShopAll__content__cards__item__img-wrapper">
-                <img
-                  src={item.image}
-                  alt={item.projectName || "Project Image"}
-                />
+                <button
+                  type="button"
+                  className="image-link"
+                  onClick={onNavigateToProducts}
+                  aria-label="Go to products"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.projectName || "Project Image"}
+                  />
+                </button>
               </div>
             </div>
           ))}

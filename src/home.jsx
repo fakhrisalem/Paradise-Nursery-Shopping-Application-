@@ -1,11 +1,12 @@
 
 import React from 'react';
 import Features from './features';
-import Testimonials from './testimonials'; 
-import ShopAll from './shopall'; 
-import './home.css'; 
+import Testimonials from './testimonials';
+import OurWork from './ourwork';
+import ShopAll from './shopall';
+import './home.css';
 
-const Home = () => {
+const Home = ({ onNavigateToProducts }) => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -15,44 +16,37 @@ const Home = () => {
 
     return (
         <div className="home-container">
-            <div className="background-image"></div>
-            
-            <div className="content">
-                <div className="landing_content">
-                   
+            <section className="home-hero" aria-label="Paradise Nursery">
+                <div className="background-image"></div>
+                <div className="content">
+                    <div className="landing_content">
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <div className="spacer"></div>
-            <div className="features-container">
+            <section className="home-section">
                 <Features />
-            </div>
+            </section>
 
-            <div className="spacer"></div>
-            <div className="shopall-container">
-                <ShopAll />
-            </div>
+            <div className="home-divider" aria-hidden="true"></div>
+            <section className="home-section shopall-container">
+                <ShopAll onNavigateToProducts={onNavigateToProducts} />
+            </section>
 
-            <div className="spacer">
-                <div className="testimonials-container">
-                    <Testimonials />
-                </div>
-            </div>
+            <div className="home-divider" aria-hidden="true"></div>
+            <section className="home-section testimonials-container">
+                <Testimonials />
+            </section>
 
-            {}
+            <div className="home-divider" aria-hidden="true"></div>
+            <section className="home-section our-work-container">
+                <OurWork />
+            </section>
+
             <button 
                 className="scroll-to-top" 
                 onClick={scrollToTop} 
-                style={{
-                    position: 'fixed',
-                    bottom: '20px',
-                    right: '20px',
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    fontSize: '40px',
-                    color: 'white',
-                }}
+                aria-label="Scroll to top"
             >
                 ↑
             </button>

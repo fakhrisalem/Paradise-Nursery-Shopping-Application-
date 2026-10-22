@@ -5,5 +5,4 @@ export default defineConfig({
 
   plugins: [react()],
   base: '/Paradise-Nursery-Shopping-Application-/'
-  // Add other configurations if necessary
 })

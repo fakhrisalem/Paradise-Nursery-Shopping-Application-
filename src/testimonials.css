@@ -87,8 +87,9 @@
 
 .image-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 30px;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -135,8 +136,17 @@
 }
 
 @media (max-width: 768px) {
+  .testimonials-section,
+  .showcase-section {
+    padding: clamp(1.25rem, 5vw, 2rem);
+  }
+
   .testimonial-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .image-gallery {
+    gap: 18px;
   }
 }

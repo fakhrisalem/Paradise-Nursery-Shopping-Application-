@@ -26,31 +26,15 @@ const Testimonials = () => {
     }, []);
 
     return (
-        <div className="page-container">
-            <div className="testimonials-section">
-                <h4 className="section-title">Testimonials</h4>
-                <div className="testimonial-content">
-                    <div className="testimonial-image">
-                        <img src={testimonialsData[currentIndex].img} alt="Testimonial author" />
-                    </div>
-                    <div className="testimonial-text">
-                         <p>"{testimonialsData[currentIndex].quote}"</p>
-                         <p className="author">{testimonialsData[currentIndex].author}</p>
-                    </div>
+        <div className="testimonials-section">
+            <h4 className="section-title">Testimonials</h4>
+            <div className="testimonial-content">
+                <div className="testimonial-image">
+                    <img src={testimonialsData[currentIndex].img} alt="Testimonial author" />
                 </div>
-            </div>
-
-            <div className="showcase-section">
-                <h4 className="section-title">Our Work</h4>
-                <div className="image-gallery">
-                    <div className="image-item">
-                        <img className="showcase-image" src="https://img.freepik.com/premium-photo/woman-caring-plants-home-spring-day_566707-2254.jpg" alt="Woman caring for plants" />
-                        <div className="image-overlay">Spring Care</div>
-                    </div>
-                    <div className="image-item">
-                        <img className="showcase-image" src="https://thumbs.dreamstime.com/b/family-caring-plants-cute-child-girl-helping-her-mother-to-care-mom-daughter-engaging-gardening-home-happy-spring-246906086.jpg" alt="Family caring for plants" />
-                        <div className="image-overlay">Family Gardening</div>
-                    </div>
+                <div className="testimonial-text">
+                    <p>"{testimonialsData[currentIndex].quote}"</p>
+                    <p className="author">{testimonialsData[currentIndex].author}</p>
                 </div>
             </div>
         </div>
@@ -58,4 +42,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-

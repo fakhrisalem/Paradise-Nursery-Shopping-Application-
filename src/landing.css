@@ -1,28 +1,46 @@
-
 .landing-page {
   display: flex;
+  min-height: clamp(520px, 100svh, 900px);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-
+  padding: clamp(24px, 6vw, 72px);
+  background:
+    linear-gradient(rgba(9, 28, 18, 0.18), rgba(9, 28, 18, 0.32)),
+    url("https://i.pinimg.com/originals/5a/6b/54/5a6b543dbb3c11695e25627f04f35d89.gif")
+      center / cover no-repeat;
+  color: #f1eaea;
   text-align: center;
-  background-image: url("https://i.pinimg.com/originals/3d/c3/87/3dc387151b115cf7ae0cf344b8e40eff.gif");
- color: #f1eaea;
+}
+
+.landing-page h1 {
+  max-width: 900px;
+  padding: 0;
+  color: #fff;
+  font-size: clamp(2.2rem, 7vw, 4.5rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
 }
 
 .get-started-button {
-  margin-top: 20px; 
-  padding: 10px 20px;
-  font-size: 18px; 
-  background-color: #70b82d; 
-  color: white; 
-  border: none; 
-  border-radius: 500px; 
-  cursor: pointer; 
-  transition: background 0.3s; 
+  min-height: 48px;
+  margin-top: 20px;
+  padding: 12px 26px;
+  border: 0;
+  border-radius: 500px;
+  background-color: #70b82d;
+  color: white;
+  cursor: pointer;
+  font-size: 1.05rem;
+  transition: background-color 0.3s;
 }
 
 .get-started-button:hover {
-  background-color: #494013; 
+  background-color: #494013;
+}
+
+@media (max-width: 480px) {
+  .landing-page {
+    min-height: 75svh;
+  }
 }
